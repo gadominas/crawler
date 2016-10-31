@@ -34,6 +34,8 @@ docker run -p 8080:8080 -t crawler/crawler
 cd crawlerMock/ && ./run.sh http://localhost:8080
 ```
 
+It will run in parallel 6 crawlers for various URL's. Each Crawler will try to open/update and close crawling session.
+
 
 # Available crawler services
 Swagger like documentation available at: http://${your_host}:8080/swagger-ui.html
