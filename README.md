@@ -11,6 +11,8 @@ Write-ahead-log crawler baked with SpringBoot/Guava/Camel.
 * Crawling data consumption and crawled session crawl data persistence are async processes.
 
 # Available crawler services
+Swagger like documentation available at: http://localhost:8080/swagger-ui.html
+
 ## (1) /openCrawlerSession - Open crawling session for a specific URL
 Crawler open crawling session for a given URL. In case the URL was already transmitted, warning msg is send.
 
