@@ -10,8 +10,29 @@ Write-ahead-log crawler baked with SpringBoot/Guava/Camel.
 * When crawling session is closed, index cache is evicted for a given URL.
 * Crawling data consumption and crawled session crawl data persistence are async processes.
 
+# Baking recipes
+## Clone & package
+```
+git clone https://github.com/gadominas/crawler.git
+cd crawler/ && ./run.sh
+```
+If you're lucky after that bake you should be able to access swagger ui at: http://localhost:8080/swagger-ui.html
+
+## Docker desert
+To bake docker image:
+```
+mvn package docker:build
+```
+
+and run the docker container:
+```
+docker run -p 8080:8080 -t crawler/crawler
+```
+
+
+
 # Available crawler services
-Swagger like documentation available at: http://localhost:8080/swagger-ui.html
+Swagger like documentation available at: http://${your_host}:8080/swagger-ui.html
 
 ## (1) /openCrawlerSession - Open crawling session for a specific URL
 Crawler open crawling session for a given URL. In case the URL was already transmitted, warning msg is send.
