@@ -29,6 +29,10 @@ and run the docker container:
 docker run -p 8080:8080 -t crawler/crawler
 ```
 
+# Test drive
+```
+cd crawlerMock/ && ./run.sh http://localhost:8080
+```
 
 
 # Available crawler services
