@@ -34,7 +34,8 @@ docker run -p 8080:8080 -t crawler/crawler
 cd crawlerMock/ && ./run.sh http://localhost:8080
 ```
 
-It will run in parallel 6 crawlers for various URL's. Each Crawler will try to open/update and close crawling session.
+It will run in parallel 10 crawlers for various URL's. Each Crawler will try to open/ multiple update and close crawling session.
+Order on how crawlers will be executed is not guaranteed.
 
 
 # Available crawler services
