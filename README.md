@@ -8,6 +8,7 @@ Write-ahead-log crawler baked with SpringBoot/Guava/Camel.
 * Crawled data for a closed crawling session can retried.
 * Crawling session can be reopened for the same given URL which would result in a populating existing crawling index for a given URL.
 * When crawling session is closed, index cache is evicted for a given URL.
+* Crawling data consumption and crawled session crawl data persistence are async processes.
 
 # Available crawler services
 ## (1) /openCrawlerSession - Open crawling session for a specific URL
