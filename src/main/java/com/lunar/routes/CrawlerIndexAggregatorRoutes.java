@@ -22,7 +22,7 @@ import java.util.Optional;
  * All crawl indexes are consumed & aggregated based on crawling URL async.
  * Aggregation stops when repoKey is provided.
  * After aggregation phase, crawl indexes are sorted by tx time (nanosec) and persisted sequentially
- * <p>
+ *
  * Created by gadominas on 10/30/16.
  */
 @Component
