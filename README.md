@@ -1,5 +1,13 @@
 # WAL crawler
-Write-ahead-log crawler baked with SpringBoot/Guava.
+Write-ahead-log crawler baked with SpringBoot/Guava/Camel.
+
+# Happy path prolog
+Crawler opens crawling session for a given URL. Crawls person profiles for a given URL and then closes crawling session.
+Crawled data is kept in the mem index cache until crawling session is closed with the given repo-key.
+When crawling session is closed, aggregated crawling data is sorted asc by crawling transaction date and 'persisted' sequentially to a separate cache repo.
+Crawled data for a closed crawling session can retried.
+Crawling session can be reopened for the same given URL which would result in a populating existing crawling index for a given URL.
+When crawling session is closed, index cache is evicted for a given URL.
 
 # Available crawler services
 ## (1) /openCrawlerSession - Open crawling session for a specific URL
